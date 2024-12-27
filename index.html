@@ -1,0 +1,188 @@
+<!-- 声明文档类型为HTML5 -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!-- 设置字符编码和视口 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程序员简历 | Developer Resume</title>
+    <!-- 引入样式表和Font Awesome图标库 -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 页面头部：包含姓名、职位和社交链接 -->
+    <header class="header">
+        <div class="container">
+            <div class="avatar">
+                <img id="avatar-preview" src="images/default-avatar.jpg" alt="张三的头像">
+                <label for="avatar-upload" class="avatar-upload-label">
+                    <i class="fas fa-camera"></i>
+                    <span>更换头像</span>
+                </label>
+                <input type="file" 
+                       id="avatar-upload" 
+                       accept="image/*"
+                       style="display: none"
+                       onchange="handleAvatarUpload(this)">
+            </div>
+            <h1>张三</h1>
+            <h2>全栈开发工程师</h2>
+            <!-- 社交媒体链接 -->
+            <div class="social-links">
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://maimai.cn" target="_blank"><i class="fas fa-handshake"></i></a>
+                <a href="mailto:example@email.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 导航栏：固定在顶部的导航菜单 -->
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#education">教育背景</a></li>
+                <li><a href="#experience">工作经验</a></li>
+                <li><a href="#projects">项目展示</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#hobbies">兴趣爱好</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 关于我部分 -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>关于我</h2>
+                <p>我是一名充满激情的全栈开发工程师，拥有5年的开发经验。专注于构建高性能、可扩展的Web应用程序。热爱学习新技术，善于解决复杂问题。</p>
+            </div>
+        </section>
+
+        <!-- 教育背景部分 -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2>教育背景</h2>
+                <div class="education-item">
+                    <h3>计算机科学与技术</h3>
+                    <h4>某知名大学</h4>
+                    <p>2015 - 2019</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 工作经验部分：使用时间线样式展示 -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>工作经验</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 - 至今</div>
+                        <div class="timeline-content">
+                            <h3>高级全栈开发工程师</h3>
+                            <h4>科技有限公司</h4>
+                            <ul>
+                                <li>负责公司核心产品的架构设计和开发</li>
+                                <li>优化系统性能，提升用户体验</li>
+                                <li>指导初级开发人员，组织技术分享会</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目展示部分：使用卡片样式展示项目 -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2>项目展示</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>企业管理系统</h3>
+                        <p>使用React和Node.js开发的现代化企业管理系统</p>
+                        <div class="project-links">
+                            <a href="#" class="button">查看详情</a>
+                            <a href="#" class="button">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能专长部分：使用网格布局展示各类技能 -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>技能专长</h2>
+                <div class="skills-grid">
+                    <!-- 前端开发技能 -->
+                    <div class="skill-category">
+                        <h3>前端开发</h3>
+                        <ul>
+                            <li>HTML5 / CSS3</li>
+                            <li>JavaScript / TypeScript</li>
+                            <li>React / Vue.js</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                    <!-- 后端开发技能 -->
+                    <div class="skill-category">
+                        <h3>后端开发</h3>
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>RESTful APIs</li>
+                        </ul>
+                    </div>
+                    <!-- 数据库技能 -->
+                    <div class="skill-category">
+                        <h3>数据库</h3>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 兴趣爱好部分 -->
+        <section id="hobbies" class="section">
+            <div class="container">
+                <h2>兴趣爱好</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <i class="fas fa-code"></i>
+                        <h3>开源贡献</h3>
+                        <p>积极参与开源社区，为各类项目贡献代码</p>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-book"></i>
+                        <h3>技术阅读</h3>
+                        <p>保持对新技术的学习热情，经常阅读技术博客和书籍</p>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-camera"></i>
+                        <h3>摄影</h3>
+                        <p>喜欢用镜头记录生活中的美好瞬间</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚部分 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 张三. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="script.js"></script>
+</body>
+</html> 
